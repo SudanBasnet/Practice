@@ -37,4 +37,25 @@ const discounts = products.map((product) => {
 const affordableproducts = products.filter((product) => {
   return product.color === "white" && product.price < 100;
 });
-console.log(affordableproducts);
+// console.log(affordableproducts);
+
+//reduce()
+// reduce turns the array into a singlevalue
+
+const prices = [2, 3, 4, 5, 6];
+
+const totalprice = prices.reduce((total, currentprice) => {
+  console.log(`${total} + ${currentprice} = ${total + currentprice}`);
+  return total + currentprice;
+}, 0);
+//0 is the starting value for total and if we don't specify the starting value it will take the starting value of array as default which. is 2 in this case
+//you can also give the initial value as empty string or array or anything you want to return it
+console.log(totalprice);
+
+const fruits = ["apple", "banana", "apple", "orange", "banana", "apple"];
+const count = fruits.reduce((tally, fruit) => {
+  tally[fruit] = (tally[fruit] || 0) + 1;
+  return tally;
+}, {});
+
+console.log(count);
