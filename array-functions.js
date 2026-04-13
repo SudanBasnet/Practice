@@ -1,12 +1,12 @@
 //map filter reduce
 
 // map method returns a new array and will not modify the original one
-const numbers = [1, 2, 3, 4];
+// const numbers = [1, 2, 3, 4];
 // const newarr = numbers.map((n) => {
 //   return n * n;
 // });
-const newarr = numbers.map((n) => n * n);
-console.log(newarr);
+// const newarr = numbers.map((n) => n * n);
+// console.log(newarr);
 
 //examples
 const products = [
@@ -20,7 +20,21 @@ const discounts = products.map((product) => {
   return {
     ...product,
     price: product.price * 0.5,
-    male: (product.male = "male"),
   };
 });
-console.log(discounts);
+// console.log(discounts);
+
+//filter
+// returns new array with the elements that pass the test
+
+// const affordableproducts = products.filter((product) => product.price < 200);
+// const affordableproducts = products.filter(
+//   (product) => product.color === "white",
+// );
+// const affordableproducts = products.filter((product) =>
+//   product.name.includes("phone"),
+// );
+const affordableproducts = products.filter((product) => {
+  return product.color === "white" && product.price < 100;
+});
+console.log(affordableproducts);
