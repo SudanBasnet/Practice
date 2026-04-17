@@ -30,3 +30,25 @@ console.log(c1()); // 2
 
 const c2 = createCounter();
 console.log(c2()); // 1 (separate memory)
+
+function bankAccount(initialBalance) {
+  let balance = initialBalance;
+
+  return {
+    deposit: (amount) => {
+      balance += amount;
+      return balance;
+    },
+    withdraw: (amount) => {
+      balance -= amount;
+      return balance;
+    },
+    getBalance: () => balance,
+  };
+}
+
+const account = bankAccount(1000);
+
+console.log(account.deposit(500)); // 1500
+console.log(account.withdraw(200)); // 1300
+console.log(account.getBalance()); // 1300
