@@ -52,3 +52,15 @@ const account = bankAccount(1000);
 console.log(account.deposit(500)); // 1500
 console.log(account.withdraw(200)); // 1300
 console.log(account.getBalance()); // 1300
+
+function multiplier(x) {
+  return function (y) {
+    return x * y;
+  };
+}
+
+const double = multiplier(2);
+const triple = multiplier(3);
+
+console.log(double(5)); // 10
+console.log(triple(5)); // 15
