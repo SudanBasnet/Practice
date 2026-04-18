@@ -19,3 +19,10 @@ let b; // (in TDZ)
 
 console.log(b); // ❌ error
 b = 20;
+
+//hoisting for function
+sayHello(); // works
+
+function sayHello() {
+  console.log("Hello");
+}
