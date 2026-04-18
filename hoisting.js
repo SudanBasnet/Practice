@@ -9,3 +9,13 @@ a = 10;
 // important
 console.log(b); // ❌ ReferenceError
 let b = 20;
+// 👉 Why?
+
+// They are hoisted BUT not initialized
+// They stay in Temporal Dead Zone (TDZ)
+
+// hoisted but NOT usable
+let b; // (in TDZ)
+
+console.log(b); // ❌ error
+b = 20;
