@@ -5,3 +5,7 @@ var a; // hoisted
 console.log(a); // undefined
 a = 10;
 // var is hoisted and initialized with undefined
+
+// important
+console.log(b); // ❌ ReferenceError
+let b = 20;
