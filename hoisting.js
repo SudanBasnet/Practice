@@ -26,3 +26,34 @@ sayHello(); // works
 function sayHello() {
   console.log("Hello");
 }
+
+sayHi(); // ❌ error
+
+const sayHi = function () {
+  console.log("Hi");
+};
+
+var x = 5;
+
+function test() {
+  console.log(x); // undefined
+  var x = 10;
+}
+
+test();
+
+function test() {
+  var x; // hoisted inside function
+  console.log(x); // undefined
+  x = 10;
+}
+
+console.log(a); // undefined
+var a = 1;
+
+function abc() {
+  console.log(a); // undefined
+  var a = 2;
+}
+
+abc();
