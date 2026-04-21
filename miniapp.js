@@ -64,3 +64,25 @@ const addTask = async (text) => {
 
   console.log("Task added:", text);
 };
+
+// ==========================
+// ❌ DELETE TASK
+// ==========================
+const deleteTask = async (id) => {
+  let tasks = await readTasks();
+
+  tasks = tasks.filter((t) => t.id !== id);
+
+  await saveTasks(tasks);
+  console.log("Task deleted:", id);
+};
+
+// ==========================
+// 📋 LIST TASKS
+// ==========================
+const listTasks = async () => {
+  const tasks = await readTasks();
+
+  console.log("\nYour Tasks:");
+  tasks.forEach((t) => console.log(`${t.id} - ${t.text}`));
+};
