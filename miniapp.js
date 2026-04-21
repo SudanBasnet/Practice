@@ -86,3 +86,21 @@ const listTasks = async () => {
   console.log("\nYour Tasks:");
   tasks.forEach((t) => console.log(`${t.id} - ${t.text}`));
 };
+
+// ==========================
+// 🌐 FETCH API (ASYNC)
+// ==========================
+const fetchUsers = async () => {
+  try {
+    const res = await fetch("https://jsonplaceholder.typicode.com/users");
+
+    if (!res.ok) throw new Error("API Failed");
+
+    const users = await res.json();
+
+    console.log("\nUsers from API:");
+    users.map((u) => console.log(u.name)); // map
+  } catch (err) {
+    console.log("Error:", err.message);
+  }
+};
