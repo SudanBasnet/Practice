@@ -115,3 +115,25 @@ setTimeout(() => console.log("setTimeout"), 0);
 Promise.resolve().then(() => console.log("Promise"));
 
 console.log("End");
+
+// ==========================
+// 🚀 RUN APP
+// ==========================
+const run = async () => {
+  await addTask("Learn JavaScript");
+  await addTask("Practice coding");
+
+  await listTasks();
+
+  const tasks = await readTasks();
+
+  if (tasks.length > 0) {
+    await deleteTask(tasks[0].id);
+  }
+
+  await listTasks();
+
+  await fetchUsers();
+};
+
+run();
