@@ -13,3 +13,17 @@ const createCounter = () => {
 };
 
 const counter = createCounter();
+
+// ASYNC/AWAIT + PROMISE
+const fetchUsers = async () => {
+  try {
+    counter(); // closure in action
+
+    const res = await fetch("https://jsonplaceholder.typicode.com/users"); // async
+    const data = await res.json();
+
+    displayUsers(data);
+  } catch (err) {
+    console.log("Error:", err);
+  }
+};
