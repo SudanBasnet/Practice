@@ -34,3 +34,14 @@ const displayUsers = (users) => {
     console.log(user.name);
   });
 };
+
+// EVENT LOOP example
+console.log("Start");
+
+setTimeout(() => {
+  console.log("Inside setTimeout"); // goes to callback queue
+}, 0);
+
+fetchUsers(); // async call
+
+console.log("End");
