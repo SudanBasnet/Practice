@@ -40,7 +40,7 @@ console.log("Start");
 
 setTimeout(() => {
   console.log("Inside setTimeout"); // goes to callback queue
-}, 0);
+}, 2000);
 
 fetchUsers(); // async call
 
