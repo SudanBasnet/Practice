@@ -19,3 +19,22 @@ const createCounter = () => {
     console.log("Tasks created:", count);
   };
 };
+
+const counter = createCounter();
+
+// ==========================
+// 📁 FILE STORAGE
+// ==========================
+const FILE = "tasks.json";
+
+// ==========================
+// 🧠 READ FILE (ASYNC)
+// ==========================
+const readTasks = async () => {
+  try {
+    const data = await fs.readFile(FILE, "utf-8");
+    return JSON.parse(data);
+  } catch {
+    return [];
+  }
+};
