@@ -38,3 +38,29 @@ const readTasks = async () => {
     return [];
   }
 };
+
+// ==========================
+// 💾 WRITE FILE
+// ==========================
+const saveTasks = async (tasks) => {
+  await fs.writeFile(FILE, JSON.stringify(tasks, null, 2));
+};
+
+// ==========================
+// ➕ ADD TASK
+// ==========================
+const addTask = async (text) => {
+  const tasks = await readTasks();
+
+  const newTask = {
+    id: Date.now(),
+    text,
+  };
+
+  tasks.push(newTask); // array method
+  await saveTasks(tasks);
+
+  counter(); // closure
+
+  console.log("Task added:", text);
+};
