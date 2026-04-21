@@ -27,3 +27,10 @@ const fetchUsers = async () => {
     console.log("Error:", err);
   }
 };
+
+// DOM + CALLBACK
+const displayUsers = (users) => {
+  users.forEach((user) => {
+    console.log(user.name);
+  });
+};
