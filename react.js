@@ -56,3 +56,14 @@ export default Profile;
 // useEffect
 // Lifting state up
 // Controlled components
+
+// Props = data passed from parent → child component
+
+// Example:
+// const Profile = (props) => {
+//   return <h1>Hello {props.name}</h1>;
+// };
+
+// const App = () => {
+//   return <Profile name="Sudan" />;
+// };
