@@ -67,3 +67,142 @@ export default Profile;
 // const App = () => {
 //   return <Profile name="Sudan" />;
 // };
+
+// 2. useEffect (Side Effects)
+
+// Used for:
+
+// API calls
+// Running code on load
+// Listening to changes
+// Example:
+// import { useState, useEffect } from "react";
+
+// const App = () => {
+//   const [data, setData] = useState([]);
+
+//   useEffect(() => {
+//     fetch("https://jsonplaceholder.typicode.com/posts")
+//       .then(res => res.json())
+//       .then(data => setData(data));
+//   }, []);
+
+//   return <div>{data.length}</div>;
+// };
+
+// 👉 Runs once when component loads
+
+// 🔹 3. Event Handling
+
+// Handling user actions (click, input, etc.)
+
+// <button onClick={() => alert("Clicked!")}>
+//   Click Me
+// </button>
+// 🔹 4. Conditional Rendering
+
+// Show UI based on condition
+
+// const isLoggedIn = true;
+
+// return (
+//   <div>
+//     {isLoggedIn ? <h1>Welcome</h1> : <h1>Please Login</h1>}
+//   </div>
+// );
+// 🔹 5. Lists & Keys
+
+// Rendering multiple items
+
+// const users = ["Sudan", "Ram", "Sita"];
+
+// return (
+//   <ul>
+//     {users.map((user, i) => (
+//       <li key={i}>{user}</li>
+//     ))}
+//   </ul>
+// );
+
+// 👉 key is important for performance
+
+// 🔹 6. Controlled Components (Forms)
+
+// React controls input values
+
+// const [name, setName] = useState("");
+
+// return (
+//   <input
+//     value={name}
+//     onChange={(e) => setName(e.target.value)}
+//   />
+// );
+// 🔹 7. Lifting State Up
+
+// Sharing state between components
+
+// 👉 Move state to parent
+
+// const Parent = () => {
+//   const [data, setData] = useState("");
+
+//   return (
+//     <>
+//       <Child setData={setData} />
+//       <h1>{data}</h1>
+//     </>
+//   );
+// };
+// 🔹 8. Context API (Global State)
+
+// Avoid prop drilling
+
+// import { createContext, useContext } from "react";
+
+// const MyContext = createContext();
+
+// const App = () => {
+//   return (
+//     <MyContext.Provider value="Sudan">
+//       <Child />
+//     </MyContext.Provider>
+//   );
+// };
+
+// const Child = () => {
+//   const data = useContext(MyContext);
+//   return <h1>{data}</h1>;
+// };
+// 🔹 9. useRef
+
+// Access DOM or store value without re-render
+
+// import { useRef } from "react";
+
+// const App = () => {
+//   const inputRef = useRef();
+
+//   return (
+//     <>
+//       <input ref={inputRef} />
+//       <button onClick={() => inputRef.current.focus()}>
+//         Focus
+//       </button>
+//     </>
+//   );
+// };
+// 🔹 10. React Router (Navigation)
+
+// Used for multiple pages
+
+// 👉 Library: React Router
+
+// 🔹 11. Custom Hooks
+
+// Reuse logic
+
+// const useCounter = () => {
+//   const [count, setCount] = useState(0);
+//   return { count, setCount };
+// };
