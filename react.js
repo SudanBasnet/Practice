@@ -233,3 +233,14 @@ export default Profile;
 // You can embed JS expressions using {}
 // const name = "John";
 // const greeting = <h1>Hello, {name}</h1>;
+
+// 3. Props (Properties)
+
+// Props pass data from parent to child components.
+
+// function Greeting(props) {
+//   return <h1>Hello, {props.name}</h1>;
+// }
+
+// // Usage
+// <Greeting name="Alice" />
