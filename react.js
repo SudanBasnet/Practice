@@ -213,3 +213,13 @@ export default Profile;
 // Created by Meta (formerly Facebook)
 // Used to build fast, interactive UIs
 // Works by breaking the UI into components
+
+// 1. Components
+
+// Components are reusable building blocks of a UI.
+
+// function Welcome() {
+//   return <h1>Hello, World!</h1>;
+// }
+// Functional components are most common today
+// Each component returns JSX (HTML-like syntax)
