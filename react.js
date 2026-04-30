@@ -244,3 +244,21 @@ export default Profile;
 
 // // Usage
 // <Greeting name="Alice" />
+
+// 4. State
+
+// State is data that can change over time inside a component.
+
+// import { useState } from "react";
+
+// function Counter() {
+//   const [count, setCount] = useState(0);
+
+//   return (
+//     <button onClick={() => setCount(count + 1)}>
+//       Count: {count}
+//     </button>
+//   );
+// }
+// useState is a React Hook
+// Updating state triggers a re-render
