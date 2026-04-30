@@ -223,3 +223,13 @@ export default Profile;
 // }
 // Functional components are most common today
 // Each component returns JSX (HTML-like syntax)
+
+// 2. JSX (JavaScript XML)
+
+// JSX lets you write HTML inside JavaScript.
+
+// const element = <h1>Hello, React!</h1>;
+// Not actual HTML — it gets compiled to JavaScript
+// You can embed JS expressions using {}
+// const name = "John";
+// const greeting = <h1>Hello, {name}</h1>;
