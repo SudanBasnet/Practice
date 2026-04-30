@@ -206,3 +206,5 @@ export default Profile;
 //   const [count, setCount] = useState(0);
 //   return { count, setCount };
 // };
+
+// React is a popular JavaScript library for building user interfaces, especially single-page applications. Here’s a clear, beginner-friendly overview of the basics.
