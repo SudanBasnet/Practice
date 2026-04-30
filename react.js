@@ -208,3 +208,8 @@ export default Profile;
 // };
 
 // React is a popular JavaScript library for building user interfaces, especially single-page applications. Here’s a clear, beginner-friendly overview of the basics.
+
+// 🔹 What is React?
+// Created by Meta (formerly Facebook)
+// Used to build fast, interactive UIs
+// Works by breaking the UI into components
